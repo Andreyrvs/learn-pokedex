@@ -1,7 +1,43 @@
+:root {
+
+	--main-bg-color: #fff;
+
+	--main-bg-body: #f2f2f2;
+	--main-text-color: #949691;
+
+	--card-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+	--text-color: #313131;
+
+	--text-card-color: #222;
+
+	--bg-color-bug: #719f3f;
+	--bg-color-dragon-top: #53a4cf;
+	--bg-color-dragon-botton: #f16e57;
+	--bg-color-fairy: #fdb9e9;
+	--bg-color-fire: #fd7d24;
+	--bg-color-ghost: #7b62a3;
+	--bg-color-ground-top: #f7de3f;
+	--bg-color-ground-botton: #ab9842;
+	--bg-color-normal: #a4acaf;
+	--bg-color-psychic: #f366b9;
+	--bg-color-steel: #9eb7b8;
+	--bg-color-dark: #707070;
+	--bg-color-eletric: #eed535;
+	--bg-color-fighting: #d56723;
+	--bg-color-flying-top: #3dc7ef;
+	--bg-color-flying-botton: #bdb9b8;
+	--bg-color-grass: #9bcc50;
+	--bg-color-ice: #51c4e7;
+	--bg-color-poison: #b97fc9;
+	--bg-color-rock: #a38c21;
+	--bg-color-water: #4592c4;
+
+}
+
 body {
-	background: #EFEFBB;
-	background: linear-gradient(to right, rgb(197, 230, 236), rgb(239, 187, 230));
-	color: white;
+	background: var(--main-bg-body);
+	color: var(--main-text-color);
 	margin: 0;
 	font-family: rubik;
 }
@@ -25,8 +61,8 @@ h1 {
 
 .card {
 	list-style: none;
-	padding: 40px;
-	color: #222;
+	box-shadow: var(--card-box-shadow);
+	color: var(--text-card-color);
 	text-align: center;
 	border-radius: 20px;
 	position: relative;
@@ -38,71 +74,83 @@ h1 {
   width: 50%;
   height: 45%;
   border-radius: 100%;
-  background-color: #fff;
+  background-color: var(--main-bg-body);
   opacity: .7;
   position: absolute;
   top: 15%;
   left: 25%;
 }
 
-.steel {
-	background-color: #f4f4f4;
-}
-
-.fire {
-	background-color: #FDDFDF;
-}
-
-.grass {
-	background-color: #DEFDE0;
-}
-
-.electric {
-	background-color: #FCF7DE;
-}
-
-.water, .ice {
-	background-color: #DEF3FD;
-}
-
-.ground {
-	background-color: #f4e7da;
-}
-
-.rock {
-	background-color: #d5d5d4;
-}
-
-.fairy {
-	background-color: #fceaff;
-}
-
-.poison {
-	background-color: #98d7a5;
-}
-
 .bug {
-	background-color: #f8d5a3;
+	background-color: var(--bg-color-bug);
 }
 
 .dragon {
-	background-color: #97b3e6;
+	background-image: linear-gradient(to bottom, var(--bg-color-dragon-top), var(--bg-color-dragon-botton));
 }
 
-.psychic {
-	background-color: #eaeda1;
+.fairy {
+	background-color: var(--bg-color-fairy);
 }
 
-.flying {
-	background-color: #F5F5F5;
+.fire {
+	background-color: var(--bg-color-fire);
 }
 
-.fighting {
-	background-color: #E6E0D4;
+.ghost {
+	background-color: var(--bg-color-ghost);
+}
+
+.ground {
+	background-image: linear-gradient(to bottom, var(--bg-color-ground-top), var(--bg-color-ground-botton)) ;
 }
 
 .normal {
-	background-color: #F5F5F5;
+	background-color: var(--bg-color-normal);
+}
+
+.psychic {
+	background-color: var(--bg-color-psychic);
+}
+
+.steel {
+	background-color: var(--bg-color-steel);
+}
+
+.dark {
+	background-color: var(--bg-color-dark);
+}
+
+.electric {
+	background-color: var(--bg-color-eletric);
+}
+
+.fighting {
+	background-color: var(--bg-color-fighting);
+}
+
+.flying {
+	background-image: linear-gradient(to bottom, var(--bg-color-flying-top), var(--bg-color-flying-botton));
+}
+
+.grass {
+	background-color: var(--bg-color-grass);
+}
+
+.ice {
+	background-color: var(--bg-color-ice);
+}
+
+.poison {
+	background-color: var(--bg-color-poison);
+}
+
+.rock {
+	background-color: var(--bg-color-rock);
+}
+
+.water {
+	background-color: var(--bg-color-water);
 }
 
 .card:hover {
@@ -120,7 +168,7 @@ h1 {
 
 .card-subtitle {
 	margin-top: 5px;
-	color: #666;
+	color: var(--text-color);
 	font-weight: lighter;
 	position: relative;
 	z-index: 2;
@@ -147,3 +195,4 @@ h1 {
 			transform: translateY(0);
 	}
 }
+
